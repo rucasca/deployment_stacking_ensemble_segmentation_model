@@ -1,0 +1,27 @@
+#######################################################################################################
+### FICHERO PARA OMITIR EN GIT ARCHIVOS QUE POR SU GRAN TAMAÑO Y PARA MAYOR LIMPIEZA NO SON SUBIDOS ###
+#######################################################################################################
+
+# Por formato de archivo se ignoran los siguientes:
+###   - Relativos a estructuras de datos
+**.tfrecord
+
+###   - Relativos a modelos fundacionales descargados de internet
+**.v2
+**.pt
+
+###   - Relativos a archivos compilados de Python a C
+**.pyc
+
+# Por carpetas, se omiten las siguientes:
+###     - Aquellas relativas a archivos compilados de Python a C
+**/__pycache__/
+###     - Carpetas generadas de forma dinámica por el código
+**/lib/
+
+###     - Las carpetas donde se cargan las imágenes   
+/dataset/
+
+###     - Las carpetas donde se cargan modelos
+/models/*
+!models/trained_models/

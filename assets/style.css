@@ -1,0 +1,321 @@
+/*************************************/
+/* *****  Estilado de la web *********/
+/*************************************/
+
+
+/*******  Estilado geneérico de todas las vistas *********/
+body {
+    margin:0px;
+    font-family:'Space Grotesk', sans-serif;
+}
+
+.content {
+    width:86%;
+    padding: 5px 10px;
+    box-sizing: border-box;
+    height: 100vh;
+    overflow-y: auto;
+}
+
+.web-layout {
+        display:flex;
+        flex-direction: row;
+        margin: 0;
+        padding: 0;
+}
+
+
+/*******  Estilado del navbar común a todas las vistas *********/
+
+.navbar {
+        width:14%;
+        background-color:#1E1E1E;
+        padding:20px ; 
+        box-sizing:border-box;
+        height:100vh;
+        overflow-y:auto;
+        border-right: 3px solid grey;
+}
+
+
+/* Entradas del navbar*/
+.navbar-entry {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    transition: background-color 0.3s, color 0.3s;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+.navbar-link {
+    text-decoration: none;
+    color: white; 
+    background-color: black;
+}
+
+.navbar-link:hover .navbar-entry {
+    background-color: #f0f0f0;  
+    color: black;            
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.navbar-entry > i{
+    margin-right: 15px
+}
+
+#pink-icon {
+    color: pink;
+}
+
+
+
+/*******  Estilado de otros elementos genéricos comunes a todas las vistas *********/
+
+h1 {
+    background-color: #1E1E1E;
+    border-radius: 5px;
+
+    padding: 20px 25px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    
+    color: #f0f0f0;
+    font-size:25px;
+    text-align:center;
+}
+
+.p-info {
+    
+    padding: 10px 2px;
+    font-size:16px;
+}
+
+label {
+    font-size: 13px;
+}
+
+.Select-value-label {
+    font-size: 14px;
+}
+
+.Select-menu {
+    font-size: 14px;
+    font-weight: normal;
+}
+
+
+
+
+
+/*******  Estilado de elementos no genéricos comunes a todas las vistas *********/
+.button_save {
+    display:inline-flex;
+    align-items:center;
+    gap:0.5rem;
+    padding:0.6rem 1.2rem;
+
+    background-color:#10b981; 
+
+    color:white;
+    border-radius: 0.5rem;
+    font-weight: 600;
+    font-family:'Segoe UI', sans-serif;
+    font-size:1rem;
+
+    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+
+    cursor:pointer;
+    border:none;
+
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    
+}
+
+.button_save:hover {
+    background-color:#059669;
+    transform:translateY(-2px);
+}
+
+.button_save:active {
+    transform:translateY(0);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.button_save i {
+    font-size:1.1rem;
+    transition: transform 0.3s ease;
+}
+
+.button_save:hover i {
+    transform:rotate(-10deg);
+}
+
+.button-inference{
+    display:inline-flex;
+    align-items:center;
+    gap:0.5rem;
+
+    padding: 0.6rem 1.2rem;
+    background-color:#1E1E1E; 
+    border-radius: 0.5rem;
+
+    color: white;
+    font-weight:600;
+    font-family:'Segoe UI', sans-serif;
+    font-size:1rem;
+    cursor:pointer;
+    border:none;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+    text-decoration:none;
+}
+
+.button-inference:hover {
+    background-color:#2e2e2e;
+    transform:translateY(-2px);
+}
+
+.button-inference i{
+    margin-right:15px
+}
+
+
+
+/*******  Estilado de la vista inferencia.py*********/
+.container-settings {
+    background-color:#f0f0f0;
+    border-radius:4px;
+    border: 1px solid grey;
+    padding: 10px 20px 20px 20px;
+}
+
+.modal-dialog {
+    margin: 1.75rem auto;
+    padding-top:30px;
+    max-width:90%;
+}
+
+.modal-header {
+    
+    border-bottom: 1px solid #dee2e6;
+    background-color:#f8f9fa;
+
+    border-top-left-radius:0.3rem;
+    border-top-right-radius:0.3rem;
+    padding:1rem;
+
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+}
+
+
+.modal-title {
+    margin:0;
+
+    font-size:1.25rem;
+    font-weight:bold;
+    text-align:center;
+
+    flex:1;
+}
+
+.modal-body {
+    padding:1rem;
+    background-color:#fff;
+}
+
+.modal-footer {
+    padding: 0.75rem 1rem;
+    border-top: 1px solid #dee2e6;
+    border-bottom-left-radius:0.3rem;
+    border-bottom-right-radius:0.3rem;
+    margin-top:20px;
+    margin-bottom:20px;
+
+    background-color:#f8f9fa;
+
+
+    display:flex;
+    justify-content:space-evenly; 
+    align-items:center;
+}
+
+.modal-footer-button {
+    padding: 10px 30px;
+    border-radius:5px;
+    color:white;
+    font-size:bold;
+}
+
+.modal-header .btn-close {
+    padding:0.5rem;
+    margin: -0.5rem -0.5rem -0.5rem auto;
+
+    background:transparent;
+
+    border:0;
+    font-size:1.5rem;
+    line-height:1;
+    
+    cursor:pointer;
+    color:#000;
+    opacity:0.5;
+}
+
+.modal-header .btn-close:hover {
+    opacity:0.75;
+}
+
+
+
+.custom-centered-modal {
+    position:fixed;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+
+    display:block;
+    z-index:1050; 
+
+    max-width:100%;
+    max-height:90%;
+    width:70%;
+
+    overflow: auto;
+}
+
+.custom-centered-modal::before {
+    content:'';
+
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+
+    background-color: rgba(0,0,0,0.5);
+    z-index:-1;
+}
+
+
+
+.modal-dialog {
+    position:relative;
+    margin:auto;
+    pointer-events:none;
+}
+
+.modal-content {
+    pointer-events:auto;
+    /* background-color: #fff; */
+    border-radius:0.3rem;
+    /* box-shadow: 0 3px 9px rgba(0,0,0,0.5); */
+}
+
+
+.custom-purple-btn:hover {
+    filter: brightness(1.1);
+    transform: scale(1.05);
+}
